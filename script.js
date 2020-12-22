@@ -37,7 +37,7 @@ var StopWatch = function (_React$Component) {
                     var miliseconds = timeEveryTik - startTime + _this2.state.miliseconds;
                     _this2.setState({ miliseconds: miliseconds });
                     startTime = timeEveryTik;
-                }, 250);
+                }, 100);
             }
         }
     }, {

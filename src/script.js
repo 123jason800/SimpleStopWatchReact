@@ -20,7 +20,7 @@ class StopWatch extends React.Component {
                     const miliseconds = (timeEveryTik- startTime) + this.state.miliseconds;
                     this.setState({miliseconds});
                     startTime = timeEveryTik;
-            },250);
+            },100);
         }
     }
 
