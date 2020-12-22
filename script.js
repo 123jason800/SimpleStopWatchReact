@@ -16,8 +16,8 @@ var StopWatch = function (_React$Component) {
 
         _this.state = {
             miliseconds: 0
-        };
-        _this.timer = null;
+            // So the timer can be run every part of our function 
+        };_this.timer = null;
         _this.start = _this.start.bind(_this);
         _this.stop = _this.stop.bind(_this);
         _this.reset = _this.reset.bind(_this);
@@ -37,7 +37,7 @@ var StopWatch = function (_React$Component) {
                     var miliseconds = timeEveryTik - startTime + _this2.state.miliseconds;
                     _this2.setState({ miliseconds: miliseconds });
                     startTime = timeEveryTik;
-                }, 100);
+                }, 250);
             }
         }
     }, {
