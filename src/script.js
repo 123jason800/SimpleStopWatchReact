@@ -4,6 +4,7 @@ class StopWatch extends React.Component {
         this.state = {
             miliseconds: 0
         }
+        // So the timer can be run every part of our function 
         this.timer = null;
         this.start = this.start.bind(this);
         this.stop = this.stop.bind(this);
@@ -19,7 +20,7 @@ class StopWatch extends React.Component {
                     const miliseconds = (timeEveryTik- startTime) + this.state.miliseconds;
                     this.setState({miliseconds});
                     startTime = timeEveryTik;
-            },100);
+            },250);
         }
     }
 
@@ -33,12 +34,6 @@ class StopWatch extends React.Component {
         this.stop();
         this.setState({miliseconds:0});
     }
-
-    
-
-
-
-
 
     render() {
         const convertedTimer = (miliseconds) => {
@@ -59,11 +54,8 @@ class StopWatch extends React.Component {
                 <div className="row justify-content-center">
                     <button className="btn col-1 mx-3 btn-outline-success" onClick = {this.start} >Start</button>
                     <button className="btn col-1 mx-3 btn-outline-danger" onClick={this.stop} >Stop</button>
-                    <button className="btn col-1 mx-3 btn-outline-warning"onClick={this.reset}>Reset</button>
+                    <button className="btn col-1 mx-3 btn-outline-warning" onClick={this.reset}>Reset</button>
                 </div>
-               
-              
-            
             </React.Fragment>
         );
     }
